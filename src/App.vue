@@ -1,10 +1,13 @@
 <script>
+import ProjectCard from "./components/ProjectCard.vue"
 import axios from "axios";
 
+
 export default {
+  components: {ProjectCard},
   data() {
     return {
-      backedUrl: "http://localhost:8000",
+      backedUrl: "http://localhost:8000/",
       project: [],
     };
   },
@@ -15,7 +18,7 @@ export default {
       });
     },
   },
-  beforeMount() {},
+  beforeMount() { },
   mounted() {
     this.fetchProject();
   },
@@ -23,11 +26,13 @@ export default {
 </script>
 
 <template>
-<TheMain></TheMain>
-
-
+  <div class="container">
+    <h1>scemo chi legge</h1>
+    <div>
+      <ProjectCard></ProjectCard>
+      <router-view></router-view>
+    </div>
+</div>
 </template>
 
-<style lang="scss">
-  @use "styles/main";
-</style>
+<style lang="scss">@use "styles/main";</style>
