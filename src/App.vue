@@ -1,10 +1,11 @@
 <script>
 import ProjectCard from "./components/ProjectCard.vue"
+import TheHeader from "./components/TheHeader.vue"
 import axios from "axios";
 
 
 export default {
-  components: {ProjectCard},
+  components: {ProjectCard , TheHeader},
   data() {
     return {
       backedUrl: "http://localhost:8000/",
@@ -29,8 +30,9 @@ export default {
   <div class="container">
     <h1>scemo chi legge</h1>
     <div>
+      <TheHeader></TheHeader>
       <ProjectCard></ProjectCard>
-      <router-view></router-view>
+    
     </div>
 </div>
 </template>
