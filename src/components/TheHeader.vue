@@ -1,4 +1,25 @@
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      Navbar: [
+        {
+          label: "Home",
+          routeName: "home",
+        },
+        {
+          label: "Project",
+          routeName: "project",
+        },
+        {
+          label: "Contatti",
+          routeName: "contatti",
+        },
+      ],
+    };
+  },
+};
+</script>
 <template>
     <div>
         <div class="btn-group">
@@ -7,9 +28,7 @@
                 Default dropdown
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                <li  v-for="(item, index) in Navbar" :key="index"><a class="dropdown-item" href="#"></a></li>
             </ul>
         </div>
 

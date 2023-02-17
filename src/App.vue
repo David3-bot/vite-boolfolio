@@ -32,7 +32,7 @@ export default {
     <div>
       <TheHeader></TheHeader>
       <ProjectCard></ProjectCard>
-    
+      <router-view></router-view>
     </div>
 </div>
 </template>
